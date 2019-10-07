@@ -1,60 +1,67 @@
 @import "bootstrap";
 
 .main-container{
-    background: url('Tokyo.jpeg');
-    height: 800px;
-    background-size: cover;
+  background: url('Tokyo.jpeg');
+  height: 800px;
+  background-size: cover;
 }
 .blurry-image{
-    filter: blur(8px);
-    background-position: center;
-    background-repeat: no-repeat;
-    width:100%;
+  filter: blur(8px);
+  background-position: center;
+  background-repeat: no-repeat;
+  width:100%;
 }
 .container{
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.4);
-    color: white;
-    font-weight: bold;
-    border: 3px solid #f1f1f1;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    width: 80%;
-    padding: 20px;
-    text-align: center;
-    width: 50%;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.4);
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+  width: 50%;
 }
 .form-control{
-    width: 80%;
-    display:inline-block;
-    float: center;
+  width: 80%;
+  display:inline-block;
+  float: center;
 }
 .btn {
-    background-color:rgba(230, 93, 250, 0.6);
-    color: white;
-    font-weight: bold;
+  background-color:rgba(230, 93, 250, 0.6);
+  color: white;
+  font-family: 'Bangers', cursive;
 }
 .btn:hover, .btn:focus, .btn:active, .btn.active, .open>.dropdown-toggle.btn {
-    background-color:rgba(230, 93, 250, 0.4);
-    color:rgb(116, 249, 252);
-    font-weight: bold;
+  background-color:rgba(230, 93, 250, 0.4);
+  color:rgb(116, 249, 252);
+  font-weight: bold;
+}
+.font{
+  font-family: 'Bangers', cursive;
 }
 .navbar-dark .navbar-brand {
-    color: navy;
+  color: navy;
+  font-family: 'Bangers', cursive;
+}
+.navbar-dark .navbar-brand:focus, .navbar-dark .navbar-brand:hover {
+  color:white !important;
 }
 
 .navbar-dark .collapse .navbar-nav .nav-item .nav-link {
-    color: navy;
+  color: navy;
+  font-family: 'Bangers', cursive;
 }
 .navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
-    color: white !important;
-    font-weight: bold;
+  color: white !important;
 }
 .navbar-dark .navbar-text{
-    color:rgba(0, 0, 128, 0.6)
+  color:rgba(0, 0, 128, 0.6)
 }
 
 
