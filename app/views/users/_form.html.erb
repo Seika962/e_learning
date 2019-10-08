@@ -1,4 +1,5 @@
 <%=form_for(@user) do |f|%>
+    <%= render 'shared/error_messages', object: f.object %>
    <h1><%= title %></h1>
    <p class="font pb-3"><%= message %></p>
     <div class="field form-group">

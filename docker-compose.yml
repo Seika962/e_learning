@@ -3,7 +3,7 @@ services:
   db:
     image: mysql:5.7
     ports:
-      - "4406:3306"
+      - "4306:3306"
     restart: always
     environment:
       - MYSQL_DATABASE=e_learning_db
