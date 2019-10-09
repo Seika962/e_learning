@@ -1,7 +1,7 @@
 <div class="main-container blurry-image"></div>
 <div class="mx-auto">
     <div class="container">
-        <%=form_for :session do |f|%>
+        <%=form_for :session, url: sessions_path do |f|%>
             <h1 class="pb-4">Log In</h1>
             <div class="field form-group">
                 <%= f.label :email %> <br>
