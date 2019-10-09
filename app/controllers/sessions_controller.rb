@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
   def new
   end
+
   def create
     @user=User.find_by(email:params[:session][:email])
 
@@ -13,5 +14,11 @@ class SessionsController < ApplicationController
       flash.now[:danger]="Invalid Credentials."
       render 'new'
     end
+  end
+  def destroy
+    log_out
+    flash[:info]="Successfully logged out."
+
+    redirect_to root_url
   end
 end
