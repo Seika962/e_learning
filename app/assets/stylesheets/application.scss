@@ -39,7 +39,7 @@
   text-align: center;
   width: 90%;
   height:95%;
-  border:2px solid black;
+  border:1px solid black;
 }
 .login-img{
   padding:0;
@@ -50,7 +50,7 @@
   padding: 0;
   width:70%;
   margin:15%;
-  border: 2px solid black;
+  border: 1px solid black;
 }
 .number{
   padding:20px;
@@ -62,7 +62,6 @@
 }
 .activity{
   background-color: rgba(255, 255, 255, 0.2);
-  border: 2px solid black;
 }
 .form-control{
   width: 80%;
@@ -118,4 +117,8 @@
 .index-text:hover{
   color:rgb(116, 249, 252);
   text-decoration: none;
+}
+.usercard{
+  margin:10px 45px;
+  background-color: rgba(255, 255, 255, 0.2);
 }
