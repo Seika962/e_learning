@@ -12,15 +12,14 @@
 
     <body>
         <%= render "layouts/header" %>
-            <% if flash.any? %>
-                <% flash.each do |type, msg| %>
-                    <div class="alert alert-<%=type%>">
-                        <div><%=msg%></div>
-                    </div>
-                <% end %>
+        <% if flash.any? %>
+            <% flash.each do |type, msg| %>
+                <div class="alert alert-<%=type%>">
+                    <div><%=msg%></div>
+                </div>
             <% end %>
-            <%= yield %>
-        
+        <% end %>
+        <%= yield %>
         <%= render "layouts/footer" %>
     </body>
 </html>
