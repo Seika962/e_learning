@@ -1,0 +1,30 @@
+<div class="main-container blurry-image"></div>
+<div>
+    <div class="profile">
+        <div class="row">
+            <div class="col-lg-4 mx-auto">
+                <div class="media">
+                    <% if @user.picture %>
+                        <%= @user.picture.find_by(id: user_id)%>
+                    <% else %>
+                        <%= image_tag("E-logo.png", class:"img-thumbnail rounded-circle") %>
+                    <% end%>
+                </div>
+                <div class="media-body">
+                    <h1 class="pb-3"><%=@user.name %></h1>
+                    <div class="relations">
+                        <div class="row">
+                            <div class="col"><h4 class="number py-4">5</h4><p class="pb-2">Following</p></div>
+                            <div class="col"><h4 class="number py-4">5</h4><p class="pb-2">Followers</p></div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-lg  btn-block mx-2">Edit Profile</button>
+                    <button type="button" class="btn btn-lg  btn-block mx-2">Administration</button>
+                </div>
+            </div>
+            <div class="activity col-lg-7 mx-auto mt-3">
+                <h1 class="pt-3 font">Activity</h1>
+            </div>
+        </div>
+    </div>
+</div>

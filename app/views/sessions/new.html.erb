@@ -3,6 +3,7 @@
     <div class="container">
         <%=form_for :session, url: sessions_path do |f|%>
             <h1 class="pb-4">Log In</h1>
+            <%= image_tag("E-logo.png", class:"login-img mb-4") %>
             <div class="field form-group">
                 <%= f.label :email %> <br>
                 <%= f.text_field :email, class: "form-control" %>
