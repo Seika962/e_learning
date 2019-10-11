@@ -6,4 +6,14 @@ Rails.application.routes.draw do
   
   resources :users
   resources :sessions, only: [:create, :destroy]
+
+  namespace :admin do
+    resources :static_pages do
+      member do
+        get 'admin_page'
+      end
+    end
+  end
+  
 end
+
