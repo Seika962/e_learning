@@ -69,7 +69,7 @@
   margin:0 20px;
 }
 .activity{
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color:rgba(237, 197, 243, 0.2);
 }
 .form-control{
   width: 80%;
@@ -101,10 +101,25 @@
   background-color: rgba(0,0,0, 0.4);
   color:white;
   width:200px;
+  border: 1px solod white;
 }
 .btn3:hover, .btn3:focus, .btn3:active, .open>.dropdown-toggle.btn3{
   background-color:rgba(78, 34, 85, 0.4);
-
+  text-decoration: none;
+  color:white;
+  border: 1px solod white;
+} 
+.btn4{
+  background-color: rgba(0,0,0, 0.4);
+  color:white;
+  width:120px;
+  border: 1px solod white;
+}
+.btn4:hover, .btn4:focus, .btn4:active, .open>.dropdown-toggle.btn4{
+  background-color:rgba(78, 34, 85, 0.4);
+  text-decoration: none;
+  color:white;
+  border: 1px solod white;
 } 
 .font{
   font-family: 'Bangers', cursive;
@@ -138,4 +153,7 @@
 .usercard{
   margin:10px 45px;
   background-color: rgba(255, 255, 255, 0.2);
+}
+.table-element{
+  width: 300px;
 }
