@@ -15,7 +15,11 @@
                         <tr>
                             <td class="table-element py-2"><%=user.name %></td>
                             <td class="table-element py-2"><%=user.email %></td>
-                            <td class="table-element py-2"><button class="btn4 btn-md">Add</button></td>
+                            <% if user.is_admin? %>
+                                <td class="table-element py-2"><%= button_to "Remove", admin_user_path(user), method: :delete, class:"btn4 btn-md"%></td>
+                            <% else %>
+                                <td class="table-element py-2"><%= button_to "Add", admin_user_path(user), method: :patch, class:"btn4 btn-md"%></td>
+                            <% end %>
                         </tr>
                     <% end%>
                 </tbody>
