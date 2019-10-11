@@ -30,8 +30,8 @@
 .alert{
   margin:0;
 }
-.profile{
-  background-color: rgba(0,0,0, 0.4);
+.container2{
+  background-color: rgba(0,0,0, 0.5);
   color: white;
   position: absolute;
   top: 12%;
@@ -39,6 +39,7 @@
   text-align: center;
   width: 90%;
   height:95%;
+  border:1px solid black;
 }
 .login-img{
   padding:0;
@@ -49,6 +50,7 @@
   padding: 0;
   width:70%;
   margin:15%;
+  border: 1px solid black;
 }
 .number{
   padding:20px;
@@ -76,6 +78,17 @@
   color:rgb(116, 249, 252);
   font-weight: bold;
 }
+.btn2{
+  background-color: rgba(116, 249, 252, 0.5);
+  color: white;
+  font-family: 'Bangers', cursive;
+}
+.btn2:hover, .btn2:focus, .btn2:active, .open>.dropdown-toggle.btn2 {
+  background-color: rgba(116, 249, 252, 0.4);
+  color: rgb(233, 147, 246);
+  text-decoration:none;
+  font-family: 'Bangers', cursive;
+}
 .font{
   font-family: 'Bangers', cursive;
 }
@@ -94,6 +107,18 @@
 .navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
   color: white !important;
 }
-
-
-
+.index-image{
+  width:90px;
+}
+.index-text{
+  color:white;
+  text-decoration: none;
+}
+.index-text:hover{
+  color:rgb(116, 249, 252);
+  text-decoration: none;
+}
+.usercard{
+  margin:10px 45px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
