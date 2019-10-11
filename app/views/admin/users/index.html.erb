@@ -1,0 +1,27 @@
+<div class="main-container blurry-image"></div>
+<div class="mx-auto">
+    <div class="transparent">
+        <h1 class="text-white">Administer Users</h1>
+            <table class="mx-auto text-white">
+                <thead>
+                    <tr>
+                        <th class="table-element py-2">Name</th>
+                        <th class="table-element py-2">Email</th>
+                        <th class="table-element py-2">Admin</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% @users.each do |user| %>
+                        <tr>
+                            <td class="table-element py-2"><%=user.name %></td>
+                            <td class="table-element py-2"><%=user.email %></td>
+                            <td class="table-element py-2"><button class="btn4 btn-md">Add</button></td>
+                        </tr>
+                    <% end%>
+                </tbody>
+            </table>
+            <div class="paginate text-center pt-3">
+                 <%= will_paginate %>
+            </div>
+    </div>
+</div>
