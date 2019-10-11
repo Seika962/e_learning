@@ -41,6 +41,14 @@
   height:95%;
   border:1px solid black;
 }
+.transparent{
+  position: absolute;
+  top: 12%;
+  left: 5%;
+  text-align: center;
+  width: 90%;
+  height:95%;
+}
 .login-img{
   padding:0;
   width:110px;
@@ -89,6 +97,15 @@
   text-decoration:none;
   font-family: 'Bangers', cursive;
 }
+.btn3{
+  background-color: rgba(0,0,0, 0.4);
+  color:white;
+  width:200px;
+}
+.btn3:hover, .btn3:focus, .btn3:active, .open>.dropdown-toggle.btn3{
+  background-color:rgba(78, 34, 85, 0.4);
+
+} 
 .font{
   font-family: 'Bangers', cursive;
 }
