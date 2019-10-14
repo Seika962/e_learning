@@ -11,6 +11,15 @@
                         <th class="table-element">Settings</th>
                     </tr>
                 </thead>
+                <tbody>
+                    <% @categories.each do |category| %>
+                        <tr>
+                            <td class="table-element"><%=category.title %></th>
+                            <td class="table-element"><%=category.description %></th>
+                            <td class="table-element"><%=link_to "Edit",edit_admin_category_path(category),class:"d-inline" %><span>/</span><%= link_to "Delete", admin_category_path(category), method: :delete, class:"d-inline" %></th>
+                        </tr>
+                    <% end %>
+                </tbody>
             </table>
             <%= link_to "Back", admin_page_admin_static_page_path(current_user), class:"text-white",style:"text-decoration:none" %>
         </div>
