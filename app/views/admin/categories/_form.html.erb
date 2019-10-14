@@ -1,0 +1,15 @@
+<%= form_for [:admin, @category] do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+    <h1 class="text-white"><%= title %></h1>
+    <div class="field form-group">
+        <%= f.label :title, class:"text-white" %> <br>
+        <%= f.text_field :title, class:"form-control"%>
+    </div>
+    <div class="field form-group">
+        <%= f.label :description, class:"text-white" %> <br>
+        <%= f.text_area :description, class:"form-control"%>
+    </div>
+    <div>
+        <%= f.submit btn_msg, class:"btn3 form-control"%>
+    </div>
+<% end %>
