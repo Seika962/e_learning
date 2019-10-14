@@ -1,0 +1,21 @@
+<div class="main-container blurry-image"></div>
+<div class="mx-auto">
+    <div class="transparent">
+        <%= form_for [:admin, @category] do |f| %>
+            <%= render 'shared/error_messages', object: f.object %>
+            <h1 class="text-white">New Category</h1>
+            <div class="field form-group">
+                <%= f.label :title, class:"text-white" %> <br>
+                <%= f.text_field :title, class:"form-control"%>
+            </div>
+            <div class="field form-group">
+                <%= f.label :description, class:"text-white" %> <br>
+                <%= f.text_area :description, class:"form-control"%>
+            </div>
+            <div>
+                <%= f.submit "create",class:"btn3 form-control"%>
+            </div>
+        <% end %>
+        <%= link_to "Back", admin_categories_path, class:"btn3" %>
+    </div>
+</div>
