@@ -1,0 +1,25 @@
+<div class="main-container blurry-image"></div>
+<div class="mx-auto">
+    <div class="transparent">
+        <h1 class="text-white">New Words</h1>
+        <%= form_for([:admin, @category, @word]) do |f| %>
+            <%= render 'shared/error_messages', object: f.object %>
+            <div class="field form-group">
+                <%= f.label :content, class:"text-white" %> <br>
+                <%= f.text_field :content, class:"form-control"%>
+            </div>
+            <div class="field form-group">
+                <%= f.label :content, class:"text-white" %> <br>
+                <%= f.text_field :content, class:"form-control"%> <br>
+                <%= f.radio_button :content, true %><p class="text-white">This is the answer!<p> <br>
+                <%= f.text_field :content, class:"form-control"%> <br>
+                 <%=f.radio_button :content, true %><p class="text-white">This is the answer!<p> <br>
+                <%= f.text_field :content, class:"form-control"%> <br>
+                 <%=f.radio_button :content, true %><p class="text-white">This is the answer!<p> <br>
+            </div>
+            <div>
+                <%= f.submit "Create New Words", class:"btn3 form-control" %>
+            </div>
+        <% end %>
+    </div>
+</div>
