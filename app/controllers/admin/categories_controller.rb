@@ -1,5 +1,6 @@
 class Admin::CategoriesController < ApplicationController
   def index
+    @categories=Category.all
   end
   def new
     @category= Category.new
@@ -11,6 +12,13 @@ class Admin::CategoriesController < ApplicationController
     else
       render 'new'
     end
+  end
+  def edit
+  end
+  def destroy
+    @category=Category.find(params[:id])
+    @category.destroy
+    redirect_to admin_categories_path
   end
 
   private
