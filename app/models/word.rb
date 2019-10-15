@@ -6,6 +6,10 @@ class Word < ApplicationRecord
   validates :content, presence: true, length: {maximum: 50}
   validate :has_one_correct
 
+  def correct_answer
+    choices.find_by(is_correct: true)
+  end
+
   private
   def has_one_correct
     unless choices.collect {|choice| choice.is_correct? }.count(true) == 1
