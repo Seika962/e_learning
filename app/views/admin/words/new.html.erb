@@ -1,24 +1,25 @@
 <div class="main-container blurry-image"></div>
 <div class="mx-auto">
     <div class="transparent">
-        <h1 class="text-white">New Words</h1>
+        <h1 class="text-white my-4">New Words</h1>
         <%= form_for([:admin, @category, @word]) do |f| %>
             <%= render 'shared/error_messages', object: f.object %>
-            <div class="field form-group">
-                <%= f.label :content, class:"text-white" %> <br>
+            <div class="field form-group wordform">
+                <%= f.label :content, class:"text-white font wordtext" %> <br>
                 <%= f.text_field :content, class:"form-control"%>
             </div>
-            <div class="field form-group">
-                <%= f.label :content, class:"text-white" %> <br>
-                <%= f.text_field :content, class:"form-control"%> <br>
-                <%= f.radio_button :content, true %><p class="text-white">This is the answer!<p> <br>
-                <%= f.text_field :content, class:"form-control"%> <br>
-                 <%=f.radio_button :content, true %><p class="text-white">This is the answer!<p> <br>
-                <%= f.text_field :content, class:"form-control"%> <br>
-                 <%=f.radio_button :content, true %><p class="text-white">This is the answer!<p> <br>
+            <div class="choice-form">
+                <%= f.label :choice, class:"text-white font wordtext" %> <br>
+                <%= f.fields_for :choices do |c| %>
+                    <div class="field form-group wordform">
+                        <%= c.text_field :content, class:"form-control"%> <br>
+                        <%= c.radio_button :is_correct, true ,class:"d-inline-block mr-2"%>
+                        <p class="text-white d-inline-block">This is the answer!<p>
+                    </div>
+                <% end %>
             </div>
             <div>
-                <%= f.submit "Create New Words", class:"btn3 form-control" %>
+                <%= f.submit "Create New Words", class:"btn3 form-control mt-2" %>
             </div>
         <% end %>
     </div>
