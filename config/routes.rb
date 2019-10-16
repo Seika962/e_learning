@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   
   resources :users
   resources :sessions, only: [:create, :destroy]
+  resources :answers
 
   namespace :admin do
 
