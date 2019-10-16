@@ -19,6 +19,9 @@
                     <%= link_to current_user.name, current_user, class:"nav-link" %>
                 </li>
                 <li class="nav-item active">
+                    <%= link_to "Lesson", categories_index_path, class:"nav-link" %>
+                </li>
+                <li class="nav-item active">
                     <%= link_to "Settings", edit_user_path(current_user), class:"nav-link" %>
                 </li>
                 <li class="nav-item active">
