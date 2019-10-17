@@ -10,6 +10,7 @@ class User < ApplicationRecord
                              uniqueness:{ case_sensitive: false }
 
   has_secure_password
+  has_many :lessons, dependent: :destroy
   validates :password, length: { minimum: 6 }, allow_nil: true
 
   mount_uploader :picture, PictureUploader

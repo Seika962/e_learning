@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   
   resources :users
   resources :sessions, only: [:create, :destroy]
-  resources :answers
+  resources :lessons do
+    resources :answers
+  end
 
   namespace :admin do
 
