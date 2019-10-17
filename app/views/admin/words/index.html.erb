@@ -17,9 +17,9 @@
                         <td class="table-element py-2"><%=word.content %></td>
                         <td class="table-element py-2"><%=word.correct_answer.content %></td>
                         <td class="table-element py-2">
-                            <%= link_to "Edit", edit_admin_category_word_path(@category, word), class:"btn4 btn-md" %>
+                            <%= link_to "Edit", edit_admin_category_word_path(@category, word), class:"btn btn4 btn-md" %>
                             /
-                            <%= link_to "Delete", admin_category_word_path(@category, word), method: :delete, class:"btn4 btn-md", data: {confirm: 'Are you sure?'}  %>
+                            <%= link_to "Delete", admin_category_word_path(@category, word), method: :delete, class:"btn btn4 btn-md", data: {confirm: 'Are you sure?'}  %>
                         </td>
                     </tr>
                 <% end %>
