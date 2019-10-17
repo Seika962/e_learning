@@ -7,7 +7,12 @@
                 <div class="border col-md-3 mx-4 py-3 my-2">
                     <h3 class="text-white"><%= category.title %></h3>
                     <h5 class="text-white"><%= category.description %></h5>
-                    <%= link_to "Start Lesson",lessons_path(category_id: category.id) ,method: :post, class:"btn btn4"%>
+                     <%# if there is a lesson with the combination of a spacific category and a user, show result. else start lesson %>
+                    <% if Lesson.where("category_id=? AND user_id=?", category, current_user).any? %>
+                        <%= link_to "Show Result", lesson_path(Lesson.find_by(category:category)), class:"btn btn4" %>
+                    <% else  %>
+                        <%= link_to "Start Lesson",lessons_path(category_id: category.id) ,method: :post, class:"btn btn4"%>
+                    <% end %>
                 </div>
             <% end%>
         </div>
