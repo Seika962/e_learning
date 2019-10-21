@@ -20,9 +20,9 @@
                         <td class="table-element py-2"><%=answer.word.choices.find_by(is_correct: true).content %></td>
                         <td class="table-element py-2">
                             <% if answer.choice.is_correct? %>
-                                correct
+                                <i class="far fa-smile-beam"></i>
                             <% else %>
-                                wrong
+                                <i class="far fa-dizzy"></i>
                             <% end %>
                         </td>
                     </tr>
