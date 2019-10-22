@@ -1,0 +1,22 @@
+<div class="main-container blurry-image"></div>
+<div class="mx-auto">
+    <div class="container3">
+        <h1 class="font my-2">Followers</h1>
+         <ul class="list-unstyled pt-4 row mb-5" >
+            <% @followers.each do |follower| %>
+                <li class="media usercard py-3 col-sm-5">
+                    <div class="mr-3">
+                        <% if follower.picture? %>
+                                <%= image_tag follower.picture.url, class:"index-image rounded-circle" %>
+                            <% else %>
+                                <%= image_tag("E-logo.png", class:"index-image rounded-circle") %>
+                            <% end %>
+                    </div>
+                    <div class="media-body">
+                        <h5 class="pt-4 text-left"><%= link_to follower.name, user_path(follower), class:"index-text pl-3"%></h5>
+                    </div>
+                </li>
+            <% end %>
+         </ul>
+    </div>
+</div>

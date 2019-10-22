@@ -5,7 +5,12 @@ Rails.application.routes.draw do
   get '/login', to:'sessions#new'
   delete '/logout', to:'sessions#destroy'
   
-  resources :users
+  resources :users do
+    member do
+      get 'following','followers'
+    end
+  end
+  
   resources :sessions, only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
   resources :lessons do
