@@ -1,0 +1,26 @@
+<div class="main-container blurry-image"></div>
+<div>
+    <div class="container3">
+        <div class="row">
+            <div class="col-lg-4 mx-auto">
+                <div class="media">
+                    <% if current_user.picture? %>
+                        <%= image_tag current_user.picture.url, class:"img-thumbnail rounded-circle" %>
+                    <% else %>
+                        <%= image_tag("E-logo.png", class:"img-thumbnail rounded-circle") %>
+                    <% end %>
+                </div>
+                <div class="media-body">
+                    <h1 class="pb-3"><%=current_user.name %></h1>
+                    <div class="pt-5 border-top ">
+                       <h5><%= link_to "learned 100 words", "#"%> <br></h5>
+                       <h5><%= link_to "learned 52 lessons", "#"%></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="activity col-lg-7 mx-auto mt-4">
+                <h1 class="pt-3 font text-white">Activity</h1>
+            </div>
+        </div>
+    </div>
+</div>
