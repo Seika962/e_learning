@@ -1,0 +1,25 @@
+<div class="main-container blurry-image"></div>
+<div class="mx-auto">
+    <div class="container3">
+        <h1 class="text-center pt-5 pb-4 border-bottom font mx-5">Following</h1>
+         <ul class="list-unstyled pt-4 row mb-5" >
+            <% @users.each do |following| %>
+                <li class="media usercard py-3 col-sm-5">
+                    <div class="mr-3">
+                        <% if following.picture? %>
+                                <%= image_tag following.picture.url, class:"index-image rounded-circle" %>
+                            <% else %>
+                                <%= image_tag("E-logo.png", class:"index-image rounded-circle") %>
+                            <% end %>
+                    </div>
+                    <div class="media-body">
+                        <h5 class="pt-4 text-left"><%= link_to following.name, user_path(following), class:"index-text pl-3"%></h5>
+                    </div>
+                </li>
+            <% end %>
+         </ul>
+         <div class="paginate float-right mr-5">
+            <%= will_paginate %>
+        </div>
+    </div>
+</div>
