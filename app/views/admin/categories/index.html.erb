@@ -4,7 +4,7 @@
         <h1 class="text-white pb-2">Administer Categories</h1>
         <%= link_to "New Category", new_admin_category_path, class:"btn3 mb-4"%>
             <table class="mx-auto text-white">
-                <thead>
+                <thead class="border-bottom"> 
                     <tr>
                         <th class="table-element">Title</th>
                         <th class="table-element">Description</th>
@@ -14,9 +14,9 @@
                 <tbody>
                     <% @categories.each do |category| %>
                         <tr>
-                            <td class="table-element none-text-decoration"><%=link_to category.title, admin_category_words_path(category) %></th>
-                            <td class="table-element"><%=category.description %></th>
-                            <td class="table-element"><%=link_to "Edit",edit_admin_category_path(category),class:"d-inline" %><span>
+                            <td class="table-element"><%=link_to category.title, admin_category_words_path(category), class:"text-decoration-none" %></th>
+                            <td class="table-element text-decoration-none"><%=category.description%></th>
+                            <td class="table-element"><%=link_to "Edit",edit_admin_category_path(category),class:"d-inline text-decoration-none" %><span>
                             /
                             </span><%= link_to "Delete", admin_category_path(category), method: :delete, class:"d-inline",data: {confirm: 'Are you sure?'} %></th>
                         </tr>
