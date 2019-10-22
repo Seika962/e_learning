@@ -2,7 +2,7 @@
 <div class="mx-auto">
     <div class="transparent">
     <h1 class="text-white"><%= @lesson.category.title%> </h1>
-    <h3 class="text-white"><%=@lesson.correct_answer%>of<%=@lesson.category.words.count%></h3>
+    <h3 class="text-white"><%=@lesson.correct_answer%><span class="px-2">of</span><%=@lesson.category.words.count%></h3>
         <table class="mx-auto text-white">
             <thead>
                 <tr>
@@ -20,9 +20,9 @@
                         <td class="table-element py-2"><%=answer.word.choices.find_by(is_correct: true).content %></td>
                         <td class="table-element py-2">
                             <% if answer.choice.is_correct? %>
-                                correct
+                                <%= fa_icon "check" %>
                             <% else %>
-                                wrong
+                                <%= fa_icon "times" %>
                             <% end %>
                         </td>
                     </tr>

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   
   resources :users
   resources :sessions, only: [:create, :destroy]
+  resources :relationships, only: [:create, :destroy]
   resources :lessons do
     resources :answers
   end
