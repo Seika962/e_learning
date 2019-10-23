@@ -33,9 +33,9 @@
                             <td class="text-left">
                                 <% if activity.action_type == "Lesson" %>
                                     <% if activity.user == current_user %>
-                                        <%= link_to "You", "#", class:"text-decoration-none" %>
+                                        <%= link_to "You", user_path(current_user), class:"text-decoration-none" %>
                                     <% else %>
-                                        <%= link_to activity.user.name, "#",class:"text-decoration-none" %>
+                                        <%= link_to activity.user.name, user_path(activity.user),class:"text-decoration-none" %>
                                     <% end %>
 
                                     <span class="mx-2">learned</span><span class="mx-2"><%= activity.action.result %></span><span mx-2>of</span>
