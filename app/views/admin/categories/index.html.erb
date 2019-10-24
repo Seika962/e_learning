@@ -2,8 +2,8 @@
     <div class="mx-auto">
         <div class="transparent">
         <h1 class="text-white pb-2">Administer Categories</h1>
-        <%= link_to "New Category", new_admin_category_path, class:"btn3 mb-4"%>
-            <table class="mx-auto text-white">
+        <%= link_to "New Category", new_admin_category_path, class:"btn btn2 mb-4"%>
+            <table class="mx-auto text-white mb-3">
                 <thead class="border-bottom"> 
                     <tr>
                         <th class="table-element">Title</th>
@@ -14,11 +14,11 @@
                 <tbody>
                     <% @categories.each do |category| %>
                         <tr>
-                            <td class="table-element"><%=link_to category.title, admin_category_words_path(category), class:"text-decoration-none" %></th>
+                            <td class="table-element"><%=link_to category.title, admin_category_words_path(category), class:"textdeco text-decoration-none" %></th>
                             <td class="table-element text-decoration-none"><%=category.description%></th>
-                            <td class="table-element"><%=link_to "Edit",edit_admin_category_path(category),class:"d-inline text-decoration-none" %><span>
+                            <td class="table-element"><%=link_to "Edit",edit_admin_category_path(category),class:"badge badge-pill badge-light d-inline text-decoration-none" %><span>
                             /
-                            </span><%= link_to "Delete", admin_category_path(category), method: :delete, class:"d-inline",data: {confirm: 'Are you sure?'} %></th>
+                            </span><%= link_to "Delete", admin_category_path(category), method: :delete, class:"badge badge-pill badge-light d-inline",data: {confirm: 'Are you sure?'} %></th>
                         </tr>
                     <% end %>
                 </tbody>
