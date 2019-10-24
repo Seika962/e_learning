@@ -5,8 +5,8 @@
         <div class="row ml-5 pl-5">
             <% @categories.each do |category| %>
                 <div class="category-box border col-md-3 mx-4 py-3 my-2">
-                    <h4 class="text-white"><%= category.title %></h3>
-                    <h6 class="text-white"><%= category.description %></h5>
+                    <h4 class="text-white"><%= category.title %></h4>
+                    <h6 class="text-white"><%= category.description %></h6>
                      <%# if there is a lesson with the combination of a spacific category and a user, show result. else start lesson %>
                     <% if Lesson.where("category_id=? AND user_id=?", category, current_user).any? %>
                         <%= link_to "Show Result", lesson_path(Lesson.find_by(category:category)), class:"btn btn2 mt-2" %>
