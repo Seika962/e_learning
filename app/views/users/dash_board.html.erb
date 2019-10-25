@@ -13,8 +13,9 @@
                 <div class="media-body">
                     <h1 class="pb-3"><%=current_user.name %></h1>
                     <div class="pt-5 border-top ">
-                       <h5><%= link_to "learned 100 words", words_path, class:"font textdeco text-decoration-none" %></h5>
-                       <h5><%= link_to "learned 52 lessons", "#", class:"font textdeco text-decoration-none" %></h5>
+                       <span class="d-inline-block">learned</span>
+                       <h3 class="d-inline-block"><%= link_to @answers.count, words_path, class:"font text-deco text-decoration-none mx-2" %></h3>
+                       <span class="d-inline-block">words</span>
                     </div>
                 </div>
             </div>
