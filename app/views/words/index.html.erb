@@ -1,0 +1,64 @@
+<div class="main-container blurry-image"></div>
+<div>
+    <div class="container3">
+        <div class="row">
+            <div class="col-lg-4 mx-auto">
+                <div class="media">
+                    <% if current_user.picture? %>
+                        <%= image_tag current_user.picture.url, class:"img-thumbnail rounded-circle" %>
+                    <% else %>
+                        <%= image_tag("E-logo.png", class:"img-thumbnail rounded-circle") %>
+                    <% end %>
+                </div>
+                <div class="media-body">
+                    <h1 class="pb-3"><%=current_user.name %></h1>
+                    <div class="pt-5 border-top ">
+                       <span class="d-inline-block">learned</span>
+                       <h3 class="d-inline-block"><%= link_to @words.count, words_path, class:"font text-deco text-decoration-none mx-2" %></h3>
+                       <span class="d-inline-block">words</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 mx-auto mt-4">
+                <h3 class="pt-3 font text-white mb-3">Words You Learned</h3>
+                <div class="dropdown">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <% if @category %>
+                            <%= @category.title%>
+                        <% else %>
+                            ALL
+                        <% end %>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <%=link_to "All",words_path, class:"dropdown-item" %>
+                        <% @categories.each do |category| %>
+                            <%= link_to category.title, words_path(category: category), class:"dropdown-item" %>
+                        <% end %>
+                    </div>
+                </div>
+
+                <table class="mt-3 mx-auto">
+                    <thead>
+                        <tr class="row">
+                            <th class="col-4 px-5"><h5>Words</h5></th>
+                            <th class="col-4 px-5"><h5>Answers</h5></th>
+                            <th class="col-4 px-5"><h5>Correct Answers</h5></th>
+                        </tr>
+                    </thead>
+                    <% @words.each do |answer| %> 
+                        <tbody style="background-color: rgba(225,225,225,0.4)">
+                            <tr class="row">
+                                <td class="col-4 py-2"><%= answer.word.content %></td>
+                                <td class="col-4 py-2"><%= answer.choice.content %></td>
+                                <td class="col-4 py-2"><%= answer.word.correct_answer.content %></td>
+                            </tr>
+                        </tbody>
+                    <% end %>
+                </table>
+                <div class="paginate float-right mt-3 mr-5">
+                    <%= will_paginate %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

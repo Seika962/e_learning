@@ -14,4 +14,5 @@ class Lesson < ApplicationRecord
     choices.where(is_correct:true).count
     # counting the number of correct answer in all the choices of the user
   end
+ 
 end
