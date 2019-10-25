@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     end
   end
   
+  resources :words, only: [:index]
   resources :sessions, only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
   resources :lessons do

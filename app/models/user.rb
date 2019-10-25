@@ -11,6 +11,8 @@ class User < ApplicationRecord
 
   has_secure_password
   has_many :lessons, dependent: :destroy
+  has_many :categories, through: :lessons
+  has_many :answers, through: :lessons
   validates :password, length: { minimum: 6 }, allow_nil: true
 
   mount_uploader :picture, PictureUploader
